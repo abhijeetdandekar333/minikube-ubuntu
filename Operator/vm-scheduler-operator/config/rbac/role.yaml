@@ -1,0 +1,85 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: manager-role
+rules:
+- apiGroups:
+  - aws.xyzcompany.com
+  resources:
+  - awsvmschedulerstarts
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - aws.xyzcompany.com
+  resources:
+  - awsvmschedulerstarts/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - aws.xyzcompany.com
+  resources:
+  - awsvmschedulerstarts/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - azure.xyzcompany.com
+  resources:
+  - azurevmschedulerstarts
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - azure.xyzcompany.com
+  resources:
+  - azurevmschedulerstarts/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - azure.xyzcompany.com
+  resources:
+  - azurevmschedulerstarts/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - gcp.xyzcompany.com
+  resources:
+  - gcpvmschedulers
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - gcp.xyzcompany.com
+  resources:
+  - gcpvmschedulers/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - gcp.xyzcompany.com
+  resources:
+  - gcpvmschedulers/status
+  verbs:
+  - get
+  - patch
+  - update

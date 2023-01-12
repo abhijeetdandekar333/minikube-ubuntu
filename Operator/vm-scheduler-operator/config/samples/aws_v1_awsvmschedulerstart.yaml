@@ -1,0 +1,12 @@
+apiVersion: aws.xyzcompany.com/v1
+kind: AWSVMSchedulerStart
+metadata:
+  labels:
+    app.kubernetes.io/name: awsvmschedulerstart
+    app.kubernetes.io/instance: awsvmschedulerstart-sample
+    app.kubernetes.io/part-of: vm-scheduler-operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: vm-scheduler-operator
+  name: awsvmschedulerstart-sample
+spec:
+  # TODO(user): Add fields here

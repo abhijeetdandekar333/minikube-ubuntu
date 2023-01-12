@@ -1,0 +1,10 @@
+kubectl convert -f <old-file> --output-version <new-api> -> after modifying api version using yaml file
+kubectl api-resources -> shows all api resources
+kubectl proxy -> starting to serve on 127.0.0.1.8001
+curl localhost:8001/api -> shows api on proxy port
+curl localhost:8001/apis/authorization.k8s.io -> shows authorization api group along with preferred version
+cd /etc/kubernetes/manifests/
+- --runtime-config=<version-name>
+add runtime api by modifying api-server file
+
+
